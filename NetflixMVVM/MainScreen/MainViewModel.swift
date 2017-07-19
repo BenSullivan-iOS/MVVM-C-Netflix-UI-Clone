@@ -16,11 +16,10 @@ protocol MainViewModelType {
 struct MainViewModel: MainViewModelType, DataService {
   
   var genres = [Genre]()
-  
   var coordinator: CoordinatorType?
   
   init(coordinator: CoordinatorType) {
-    genres = getGenres()
+    self.genres = getGenres()
     self.coordinator = coordinator
   }
   

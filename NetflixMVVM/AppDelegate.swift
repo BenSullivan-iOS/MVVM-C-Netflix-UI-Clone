@@ -22,21 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     appCoordinator.start()
     
-//    let viewModel = MainViewModel()
-//
-//    let navController = UINavigationController()
-//
-//    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//    if let mainVC = storyboard.instantiateViewController(withIdentifier: "mainVC") as? MainVC {
-//
-//      mainVC.viewModel = viewModel
-//
-//      navController.viewControllers = [mainVC]
-//
-//      window?.rootViewController = navController
-//
-//    }
-    
     return true
   }
   

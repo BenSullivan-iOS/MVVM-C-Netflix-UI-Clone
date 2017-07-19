@@ -17,11 +17,22 @@ struct MainCoordinator: CoordinatorType {
   }
   
   func start() {
-    
+    let storyboard = UIStoryboard(name: "Main", bundle: .main)
+    if let mainVC = storyboard.instantiateViewController(withIdentifier: "mainVC") as? MainVC {
+      let coordinator = MainCoordinator(navController: navController)
+      mainVC.viewModel = MainViewModel(coordinator: coordinator)
+      
+      navController.viewControllers = [mainVC]
+    }
   }
   
   func transition(toMovie: Movie) {
     let vc = UIViewController()
+    vc.view.backgroundColor = .yellow
+    let imageView = UIImageView()
+    imageView.frame = vc.view.frame
+    imageView.image = UIImage(named: toMovie.imageName)
+    vc.view.addSubview(imageView)
     navController.present(vc, animated: true)
     
   }
