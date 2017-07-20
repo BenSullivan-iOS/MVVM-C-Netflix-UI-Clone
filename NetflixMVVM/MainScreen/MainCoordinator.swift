@@ -19,8 +19,7 @@ struct MainCoordinator: CoordinatorType {
   func start() {
     let storyboard = UIStoryboard(name: "Main", bundle: .main)
     if let mainVC = storyboard.instantiateViewController(withIdentifier: "mainVC") as? MainVC {
-      let coordinator = MainCoordinator(navController: navController)
-      mainVC.viewModel = MainViewModel(coordinator: coordinator)
+      mainVC.viewModel = MainViewModel(coordinator: self)
       
       navController.viewControllers = [mainVC]
     }
