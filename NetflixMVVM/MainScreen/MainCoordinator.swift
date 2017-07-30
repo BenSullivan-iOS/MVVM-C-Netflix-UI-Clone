@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MainCoordinator: CoordinatorType {
+struct MainCoordinator: MainCoordinatorType {
   
   let navController: UINavigationController
   
@@ -25,14 +25,25 @@ struct MainCoordinator: CoordinatorType {
     }
   }
   
+  func transition(toScreen screen: Screen, withMovie: Movie) {
+    
+    switch screen {
+    case .detail:
+      let coordinator = DetailCoordinator(navController: navController)
+      coordinator.start(withMovie: withMovie)
+    default:
+      break
+    }
+  }
+  
   func transition(toMovie: Movie) {
-    let vc = UIViewController()
-    vc.view.backgroundColor = .yellow
-    let imageView = UIImageView()
-    imageView.frame = vc.view.frame
-    imageView.image = UIImage(named: toMovie.imageName)
-    vc.view.addSubview(imageView)
-    navController.present(vc, animated: true)
+//    let vc = UIViewController()
+//    vc.view.backgroundColor = .yellow
+//    let imageView = UIImageView()
+//    imageView.frame = vc.view.frame
+//    imageView.image = UIImage(named: toMovie.imageName)
+//    vc.view.addSubview(imageView)
+//    navController.present(vc, animated: true)
     
   }
 }

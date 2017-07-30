@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="138.0809595202399"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="GPv-om-ma4">
             <objects>
-                <viewController storyboardIdentifier="detailVC" id="aRb-bX-XEa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="aRb-bX-XEa" customClass="DetailVC" customModule="NetflixMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OhA-BN-KCS"/>
                         <viewControllerLayoutGuide type="bottom" id="3nv-vX-ZT7"/>
@@ -114,12 +116,35 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="vE8-ML-EBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sn-RN-38G">
+                                <rect key="frame" x="59" y="20" width="257" height="467"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-Jj-kEN">
+                                <rect key="frame" x="166" y="495" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8sn-RN-38G" firstAttribute="top" secondItem="OhA-BN-KCS" secondAttribute="bottom" id="4Gn-L8-iTX"/>
+                            <constraint firstItem="jaP-Jj-kEN" firstAttribute="top" secondItem="8sn-RN-38G" secondAttribute="bottom" constant="8" id="4mZ-oH-SRL"/>
+                            <constraint firstItem="jaP-Jj-kEN" firstAttribute="centerX" secondItem="vE8-ML-EBd" secondAttribute="centerX" id="8Zo-oa-o7N"/>
+                            <constraint firstItem="8sn-RN-38G" firstAttribute="leading" secondItem="vE8-ML-EBd" secondAttribute="leadingMargin" constant="43" id="8zY-Hl-2mI"/>
+                            <constraint firstItem="8sn-RN-38G" firstAttribute="height" secondItem="vE8-ML-EBd" secondAttribute="height" multiplier="0.7" id="V7d-Uf-Akx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8sn-RN-38G" secondAttribute="trailing" constant="43" id="nbI-8q-FHp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coverImage" destination="8sn-RN-38G" id="ULi-zK-Fxm"/>
+                        <outlet property="movieTitle" destination="jaP-Jj-kEN" id="vwb-2h-H5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhZ-Xg-76b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="138"/>
+            <point key="canvasLocation" x="1269.5999999999999" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

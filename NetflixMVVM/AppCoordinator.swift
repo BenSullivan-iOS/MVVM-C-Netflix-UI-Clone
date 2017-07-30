@@ -8,13 +8,21 @@
 
 import UIKit
 
+enum Screen {
+  case detail
+}
+
 protocol CoordinatorType {
   func start()
-  func transition(toMovie: Movie)
+  func transition(toScreen screen: Screen)
 }
 
 extension CoordinatorType {
-  func transition(toMovie: Movie) { }
+  func transition(toScreen screen: Screen) { }
+}
+
+protocol MainCoordinatorType: CoordinatorType {
+  func transition(toScreen screen: Screen, withMovie: Movie)
 }
 
 struct AppCoordinator: CoordinatorType {
