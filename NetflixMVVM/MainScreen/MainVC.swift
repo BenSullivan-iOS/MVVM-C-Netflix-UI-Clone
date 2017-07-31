@@ -47,7 +47,7 @@ extension MainVC: UITableViewDataSource {
 extension MainVC: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 30
+    return view.frame.height / 30
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
