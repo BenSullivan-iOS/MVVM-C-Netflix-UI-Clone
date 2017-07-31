@@ -34,9 +34,11 @@ extension MainVC: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableCell
     
-    cell.genre = viewModel?.genres[indexPath.section] ?? Genre(name: "None", movies: [])
-    cell.delegate = self
-    cell.collectionView.reloadData()
+    if let genre = viewModel?.genres[indexPath.section] {
+      cell.configureCell(withGenre: genre)
+      cell.delegate = self
+    }
+
     return cell
   }
   

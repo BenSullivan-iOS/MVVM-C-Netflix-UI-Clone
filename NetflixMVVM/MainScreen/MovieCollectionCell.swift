@@ -12,4 +12,8 @@ class MovieCollectionCell: UICollectionViewCell {
   
   @IBOutlet weak var mainImage: UIImageView!
   
+  func configureCell(genre: Genre) {
+    
+  }
+  
 }

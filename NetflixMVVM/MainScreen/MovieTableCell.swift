@@ -20,7 +20,14 @@ class MovieTableCell: UITableViewCell {
   
   var genre = Genre(name: "str", movies: [Movie(imageName: "movie-1")])
   
+  func configureCell(withGenre genre: Genre) {
+    self.genre = genre
+    collectionView.reloadData()
+  }
+  
   override func awakeFromNib() {
+    super.awakeFromNib()
+    
     collectionView.dataSource = self
     collectionView.delegate = self
   }
