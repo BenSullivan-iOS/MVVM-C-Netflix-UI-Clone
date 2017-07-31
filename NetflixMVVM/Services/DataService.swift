@@ -42,10 +42,10 @@ extension DataService {
     for i in 15...19 {
       movieArr4.append(movies[i])
     }
-    for i in 15...19 {
+    for i in 20...24 {
       movieArr5.append(movies[i])
     }
-    for i in 15...19 {
+    for i in 25...31 {
       movieArr6.append(movies[i])
     }
     

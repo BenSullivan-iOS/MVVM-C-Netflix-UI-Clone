@@ -36,7 +36,7 @@ extension MainVC: UITableViewDataSource {
     
     cell.genre = viewModel?.genres[indexPath.section] ?? Genre(name: "None", movies: [])
     cell.delegate = self
-    
+    cell.collectionView.reloadData()
     return cell
   }
   

@@ -14,15 +14,15 @@ protocol MovieCellDelegate {
 
 class MovieTableCell: UITableViewCell {
   
-  @IBOutlet weak var colletionView: UICollectionView!
+  @IBOutlet weak var collectionView: UICollectionView!
   
   var delegate: MovieCellDelegate?
   
   var genre = Genre(name: "str", movies: [Movie(imageName: "movie-1")])
   
   override func awakeFromNib() {
-    colletionView.dataSource = self
-    colletionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.delegate = self
   }
   
 }
