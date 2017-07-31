@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MainCoordinatorType: CoordinatorType {
+  func transition(toScreen screen: Screen, withMovie: Movie)
+}
+
 struct MainCoordinator: MainCoordinatorType {
   
   let navController: UINavigationController
@@ -31,8 +35,6 @@ struct MainCoordinator: MainCoordinatorType {
     case .detail:
       let coordinator = DetailCoordinator(navController: navController)
       coordinator.start(withMovie: withMovie)
-    default:
-      break
     }
   }
   

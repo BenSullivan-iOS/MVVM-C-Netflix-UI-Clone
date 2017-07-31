@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481B170B1F2F2D750002F117 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481B170A1F2F2D750002F117 /* CoordinatorType.swift */; };
+		481B170D1F2F2D950002F117 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481B170C1F2F2D950002F117 /* Screen.swift */; };
 		48942EF71F1DF3FD00C3F6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942EF61F1DF3FD00C3F6CF /* AppDelegate.swift */; };
 		48942EF91F1DF3FD00C3F6CF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942EF81F1DF3FD00C3F6CF /* MainVC.swift */; };
 		48942EFC1F1DF3FD00C3F6CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48942EFA1F1DF3FD00C3F6CF /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481B170A1F2F2D750002F117 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		481B170C1F2F2D950002F117 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		48942EF31F1DF3FD00C3F6CF /* NetflixMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48942EF61F1DF3FD00C3F6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48942EF81F1DF3FD00C3F6CF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				48942F0D1F1E1C1A00C3F6CF /* Genre.swift */,
+				481B170C1F2F2D950002F117 /* Screen.swift */,
+				481B170A1F2F2D750002F117 /* CoordinatorType.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 				48942EF91F1DF3FD00C3F6CF /* MainVC.swift in Sources */,
 				48CABFA51F2E222900D1288B /* DetailCoordinator.swift in Sources */,
 				48942EF71F1DF3FD00C3F6CF /* AppDelegate.swift in Sources */,
+				481B170B1F2F2D750002F117 /* CoordinatorType.swift in Sources */,
+				481B170D1F2F2D950002F117 /* Screen.swift in Sources */,
 				48942F161F1E46F800C3F6CF /* AppCoordinator.swift in Sources */,
 				48CABFA91F2E224000D1288B /* DetailViewModel.swift in Sources */,
 				48942F0B1F1E01C500C3F6CF /* MovieCollectionCell.swift in Sources */,
@@ -258,6 +266,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -313,6 +323,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

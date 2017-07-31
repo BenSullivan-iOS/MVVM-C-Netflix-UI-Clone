@@ -13,9 +13,8 @@ protocol DetailCoordinatorType: CoordinatorType {
 }
 
 struct DetailCoordinator: DetailCoordinatorType {
-  func start() {
-    
-  }
+  
+  let navController: UINavigationController
   
   func start(withMovie movie: Movie) {
     let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -27,7 +26,6 @@ struct DetailCoordinator: DetailCoordinatorType {
   }
   
   
-  let navController: UINavigationController
   
   init(navController: UINavigationController) {
     self.navController = navController
